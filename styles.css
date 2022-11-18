@@ -1,0 +1,339 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+.ancho{
+    max-width: 1200px;
+    margin: auto;
+}
+nav{
+    display: none;
+}
+@media screen and (max-width: 480px) {
+    body{
+    /* background-color: blue; */
+    }
+    .ancho{
+        max-width: 480px;
+        margin: auto;
+    }
+    figure{
+        max-width: 200px;
+    }
+    figure img{
+        width: 100%;
+        object-fit: cover;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .menu i{
+        color: #ff4048;
+    }
+    nav{
+        /* border: 1px solid red; */
+        background-color: #ff4048;
+        padding: 20px;
+    }
+    nav ul{
+        /* border: 1px solid blue; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    nav ul li{
+        /* border: 1px solid green; */
+        width: 100%;
+    }
+    nav ul li a{
+        display: block;
+        text-decoration: none;
+        border-bottom: 1px dotted white;
+        border-width: thick;
+        color: white;
+        padding: 10px 0px;
+    }
+    .rslides {
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        /* border: 1px solid red; */
+        height: 390px;
+    }
+    .galeria{
+        height: 390px;
+    }
+    .rslides li {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left;
+    }
+    .rslides img {
+        display: block;
+        /* height: auto; */
+        float: left;
+        width: 100%;
+        height: 390px;
+        object-fit: cover;
+        border: 0;
+    }
+    .callbacks_container {
+        /* margin-bottom: 50px; */
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 390px;
+        }
+    .callbacks {
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        width: 100%;
+        height: 390px;
+        padding: 0;
+        margin: 0;
+        }
+      
+      .callbacks li {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        }
+      
+      .callbacks img {
+        display: block;
+        position: relative;
+        z-index: 1;
+        height: auto;
+        width: 100%;
+        height: 390px;
+        object-fit: cover;
+        border: 0;
+        }
+      
+      .callbacks .caption {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        font-size: 30px;
+        line-height: 30px;
+        text-shadow: none;
+        color: #fff;
+        background: #000;
+        background: rgba(0,0,0, .6);
+        left: calc(50% - 150px);
+        right: 0;
+        bottom: 50px;
+        padding: 10px 20px;
+        margin: 0;
+        max-width: 300px;
+        text-align: right;
+        }
+      
+      .callbacks_nav {
+        position: absolute;
+        /* -webkit-tap-highlight-color: rgba(0,0,0,0); */
+        filter: invert(200%);
+        top: 52%;
+        left: 0;
+        opacity: .5;
+        z-index: 3;
+        text-indent: -9999px;
+        overflow: hidden;
+        text-decoration: none;
+        height: 61px;
+        width: 38px;
+        background: transparent url("imagenes/themes.gif") no-repeat left top;
+        margin-top: -45px;
+        }
+      
+      .callbacks_nav:active {
+        opacity: 1.0;
+        }
+      
+      .callbacks_nav.next {
+        left: auto;
+        background-position: right top;
+        right: 0;
+        }
+        .servicios{
+            padding: 30px 0px;
+            display: flex;
+            flex-direction: column;
+        }
+        .servicios h2{
+            text-align: center;
+            color: #ff4048;
+        }
+        .barra{
+            margin: 10px auto;
+            width: 75px;
+            border: 2px solid black;
+        }
+        .services{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 1600px;
+        }
+        .services article{
+            width: 340px;
+            height: 350px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0px 0px 20px 5px #D7D7D7;
+        }
+        .icono-s{
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #D7D7D7;
+            border-radius: 5px;
+        }
+        .icono-s i{
+            color: #ff4048;
+            font-size: 50px;
+        }
+        .services article h3{
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .services article p{
+            width: 80%;
+            text-align: center;
+            font-size: 16px;
+        }
+        .parallax{
+            color: #f5f5f5;
+            padding: 30px;
+            background-image: url("imagenes/foto_parallaxs.jpg");
+            background-position: center center;
+            height: 560px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .parallax h2{
+            text-align: right;
+            font-size: 44px;
+            line-height: 40px;
+        }
+        .rojo{
+            color: #ff4048;
+        }
+        .parallax a{
+            width: 250px;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: right;
+            font-size: 24px;
+            color: #f5f5f5;
+            background-color: #ff4048;
+        }
+        .galeria{
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-height: 400px;
+            overflow: hidden;
+        }
+        .galeria figure{
+            max-width: 350px;
+            height: 350px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+            overflow: hidden;
+            border: 10px solid white;
+        }
+        .galeria figure img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .redes-sociales{
+            margin: 20px 5px 5px 5px;
+            border: 3px solid #ff4048;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 160px;
+            gap: 20px;
+        }
+        .redes{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #D7D7D7;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+        .redes i{
+            color: #ff4048;
+            font-size: 25px;
+        }
+        .subir{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ff4048;
+            opacity: .5;
+            z-index: 9999;
+        }
+        .subir i{
+            color: white;
+        }
+}
